@@ -75,7 +75,7 @@ public class boardService {
 	 * @param number
 	 */
 	@Transactional
-	public void updateboard(@PathVariable("number") Integer number, boardDTO dto) { 
+	public void updateboard(boardDTO dto) { 
 		
 		System.out.println("서비스 : dto : " +dto);
 		
@@ -87,6 +87,10 @@ public class boardService {
 		
 		System.out.println("글 수정 후 dto : " + dto);
 	}
+
+	
+	
+	
 	
 	
 	

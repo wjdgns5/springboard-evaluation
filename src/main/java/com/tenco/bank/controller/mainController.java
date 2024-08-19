@@ -34,10 +34,11 @@ public class mainController {
 		
 		List<boardDTO> board = service.readboard();
 		
+		
+				
 		model.addAttribute("board", board);
 		System.out.println("board : " +board);
-		
-		// return "blog";
+
 		return "blog";
 	}
 	
@@ -110,7 +111,7 @@ public class mainController {
 				.author(author)
 				.build();
 						
-		service.updateboard(number, dto);
+		service.updateboard(dto);
 		
 		return "redirect:/blog/main";
 	}

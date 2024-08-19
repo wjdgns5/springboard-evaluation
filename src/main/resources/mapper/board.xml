@@ -32,5 +32,9 @@
 		update board set title = #{title}, content = #{content}, author = #{author} where number = #{number};
 		
 	</update>
+	
+	<select id="count" resultType="int">
+		select count(*) from board;
+	</select>
 
 </mapper>

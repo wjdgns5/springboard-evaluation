@@ -25,5 +25,8 @@ public interface boardRepository {
 	
 	// TODO - 검색 number를 사용하여 제목, 내용, 작성자 찾기
 	public boardDTO search(Integer number);
+	
+	// TODO - 게시판 글 총 갯수
+	public int number();
 
 }
