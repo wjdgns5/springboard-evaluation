@@ -15,6 +15,7 @@
 		<div class="form-group">
 			<label for="title">제목</label>
 			<input type="text" maxlength="20" class="form-control" placeholder="Enter 제목" id="title" name="title" value="${board.title}">
+			<input type="hidden" maxlength="20" class="form-control" id="id" name="number" value="${board.number}">
 		</div>
 		<div class="form-group">
 			<label for="content">내용</label>

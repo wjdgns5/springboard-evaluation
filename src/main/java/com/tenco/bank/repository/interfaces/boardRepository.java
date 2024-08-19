@@ -3,6 +3,7 @@ package com.tenco.bank.repository.interfaces;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import com.tenco.bank.dto.boardDTO;
 
@@ -18,7 +19,9 @@ public interface boardRepository {
 	public int delete(Integer number);
 	
 	// TODO - 수정
-	public int update(Integer number);
+	public int update(boardDTO dto);
+	
+	public int update2(boardDTO dto);
 	
 	// TODO - 검색 number를 사용하여 제목, 내용, 작성자 찾기
 	public boardDTO search(Integer number);

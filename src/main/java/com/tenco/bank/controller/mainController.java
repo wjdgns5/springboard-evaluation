@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tenco.bank.dto.boardDTO;
 import com.tenco.bank.service.boardService;
@@ -97,9 +98,19 @@ public class mainController {
 	 * @return
 	 */
 	@PostMapping("/bupdateProc/{number}")
-	public String updateProc(boardDTO dto, @PathVariable("number") Integer number) {
+	public String updateProc(@PathVariable("number") Integer number, Model model,
+			@RequestParam("title") String title,
+			@RequestParam("content") String content,
+			@RequestParam("author") String author) {
 		
-		service.updateboard(number);
+		boardDTO dto = boardDTO.builder()
+				.number(number)
+				.title(title)
+				.content(content)
+				.author(author)
+				.build();
+						
+		service.updateboard(number, dto);
 		
 		return "redirect:/blog/main";
 	}

@@ -27,5 +27,10 @@
 		update board set title = #{title}, content = #{content}, author = #{author} where number = #{number};
 		
 	</update>
+	
+	<update id="update2">
+		update board set title = #{title}, content = #{content}, author = #{author} where number = #{number};
+		
+	</update>
 
 </mapper>
